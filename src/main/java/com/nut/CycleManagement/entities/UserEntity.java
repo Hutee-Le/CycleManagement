@@ -1,15 +1,15 @@
 package com.nut.CycleManagement.entities;
 
 import jakarta.persistence.*;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.Collection;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name = "tbl_users")
-public class UserEntity extends BaseEntity {
-
-    private static final long serialversionUID = 1L;
+public class UserEntity extends BaseEntity{
 
     @Column(unique = true, nullable = false)
     private String email;
@@ -17,7 +17,7 @@ public class UserEntity extends BaseEntity {
     @Column(nullable = false)
     private String password;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "role_id")
     private RoleEntity roleEntity;
 

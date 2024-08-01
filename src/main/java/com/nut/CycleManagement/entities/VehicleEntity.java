@@ -6,9 +6,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "tbl_vehicles")
-public class VehicleEntity extends BaseEntity {
-
-    private static final long serialversionUID = 1L;
+public class VehicleEntity extends BaseEntity{
 
     @Column(nullable = false)
     private String make;

@@ -1,10 +1,6 @@
 package com.nut.CycleManagement.entities;
 
 import jakarta.persistence.*;
-import org.springframework.data.annotation.CreatedBy;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedBy;
-import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.util.Date;
@@ -17,16 +13,16 @@ public abstract class BaseEntity {
     private int id;
 
     @Column(updatable = false)
-    private int create_by;
+    private Integer created_by;
 
     @Column(updatable = false)
-    private Date create_at;
+    private Date created_at;
 
     @Column(insertable = false)
-    private int update_by;
+    private Integer updated_by;
 
     @Column(insertable = false)
-    private Date update_at;
+    private Date updated_at;
 
     public int getId() {
         return id;
@@ -36,35 +32,35 @@ public abstract class BaseEntity {
         this.id = id;
     }
 
-    public int getCreate_by() {
-        return create_by;
+    public Integer getCreated_by() {
+        return created_by;
     }
 
-    public void setCreate_by(int create_by) {
-        this.create_by = create_by;
+    public void setCreated_by(Integer created_by) {
+        this.created_by = created_by;
     }
 
-    public Date getCreate_at() {
-        return create_at;
+    public Date getCreated_at() {
+        return created_at;
     }
 
-    public void setCreate_at(Date create_at) {
-        this.create_at = create_at;
+    public void setCreated_at(Date created_at) {
+        this.created_at = created_at;
     }
 
-    public int getUpdate_by() {
-        return update_by;
+    public Integer getUpdated_by() {
+        return updated_by;
     }
 
-    public void setUpdate_by(int update_by) {
-        this.update_by = update_by;
+    public void setUpdated_by(Integer updated_by) {
+        this.updated_by = updated_by;
     }
 
-    public Date getUpdate_at() {
-        return update_at;
+    public Date getUpdated_at() {
+        return updated_at;
     }
 
-    public void setUpdate_at(Date update_at) {
-        this.update_at = update_at;
+    public void setUpdated_at(Date updated_at) {
+        this.updated_at = updated_at;
     }
 }

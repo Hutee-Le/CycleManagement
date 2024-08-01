@@ -11,8 +11,6 @@ import java.util.Date;
 @Table(name = "tbl_maintenace_records")
 public class MaintenaceRecordEntity extends BaseEntity {
 
-    private static final long serialversionUID = 1L;
-
     @Column(nullable = false)
     private String description;
 

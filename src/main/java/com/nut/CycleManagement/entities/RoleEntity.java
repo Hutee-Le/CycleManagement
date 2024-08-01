@@ -6,8 +6,6 @@ import jakarta.persistence.*;
 @Table(name = "tbl_roles")
 public class RoleEntity {
 
-    private static final long serialversionUID = 1L;
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
